@@ -23,8 +23,6 @@ def client():
 
 
 def test_health(client):
-    # Added to get the prebuild tests to fail
-    assert False 
     response = client.get('/')
     assert response.status_code == 200
     assert response.json == 'Healthy'
